@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <file path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java"
+         totalNumberOfTokens="98"/>
+   <file path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java"
+         totalNumberOfTokens="772"/>
+   <duplication lines="11" tokens="63">
+      <file begintoken="560"
+            column="39"
+            endcolumn="16"
+            endline="112"
+            endtoken="622"
+            line="102"
+            path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java"/>
+      <file begintoken="624"
+            column="39"
+            endcolumn="16"
+            endline="122"
+            endtoken="686"
+            line="112"
+            path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java"/>
+      <codefragment><![CDATA[  public double calcularTotalMinorista(Pedido p) {
+    double subtotal = p.montoBase * p.cantidad;
+    double desc = calcularDescuento(p);
+    double total = subtotal - subtotal * desc;
+    double envio = calcularCostoEnvio(p);
+    total = total + envio;
+    total = total + total * 0.21;
+    return Math.round(total * 100.0) / 100.0;
+  }
+
+  public double calcularTotalMayorista(Pedido p) {
+]]></codefragment>
+   </duplication>
+   <duplication lines="11" tokens="62">
+      <file begintoken="560"
+            column="39"
+            endcolumn="9"
+            endline="112"
+            endtoken="621"
+            line="102"
+            path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java"/>
+      <file begintoken="624"
+            column="39"
+            endcolumn="9"
+            endline="122"
+            endtoken="685"
+            line="112"
+            path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java"/>
+      <file begintoken="688"
+            column="33"
+            endcolumn="9"
+            endline="132"
+            endtoken="749"
+            line="122"
+            path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java"/>
+      <codefragment><![CDATA[  public double calcularTotalMinorista(Pedido p) {
+    double subtotal = p.montoBase * p.cantidad;
+    double desc = calcularDescuento(p);
+    double total = subtotal - subtotal * desc;
+    double envio = calcularCostoEnvio(p);
+    total = total + envio;
+    total = total + total * 0.21;
+    return Math.round(total * 100.0) / 100.0;
+  }
+
+  public double calcularTotalMayorista(Pedido p) {
+]]></codefragment>
+   </duplication>
+</pmd-cpd>

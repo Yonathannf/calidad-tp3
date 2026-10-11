@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="7.0.0" timestamp="2026-10-10T23:33:24.739">
+<file name="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java">
+<violation beginline="20" endline="20" begincolumn="17" endcolumn="34" rule="CognitiveComplexity" ruleset="Design" package="ar.edu.utn.tp3.pedidos" class="PedidoService" method="calcularDescuento" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_design.html#cognitivecomplexity" priority="3">
+The method 'calcularDescuento(Pedido)' has a cognitive complexity of 18, current threshold is 15
+</violation>
+<violation beginline="20" endline="20" begincolumn="17" endcolumn="34" rule="CyclomaticComplexity" ruleset="Design" package="ar.edu.utn.tp3.pedidos" class="PedidoService" method="calcularDescuento" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_design.html#cyclomaticcomplexity" priority="3">
+The method 'calcularDescuento(Pedido)' has a cyclomatic complexity of 12.
+</violation>
+<violation beginline="54" endline="54" begincolumn="17" endcolumn="35" rule="CognitiveComplexity" ruleset="Design" package="ar.edu.utn.tp3.pedidos" class="PedidoService" method="calcularCostoEnvio" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_design.html#cognitivecomplexity" priority="3">
+The method 'calcularCostoEnvio(Pedido)' has a cognitive complexity of 31, current threshold is 15
+</violation>
+<violation beginline="54" endline="54" begincolumn="17" endcolumn="35" rule="CyclomaticComplexity" ruleset="Design" package="ar.edu.utn.tp3.pedidos" class="PedidoService" method="calcularCostoEnvio" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_design.html#cyclomaticcomplexity" priority="3">
+The method 'calcularCostoEnvio(Pedido)' has a cyclomatic complexity of 16.
+</violation>
+</file>
+</pmd>

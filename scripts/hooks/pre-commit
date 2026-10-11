@@ -1,0 +1,51 @@
+#!/bin/sh
+# ----------------------------------------------------------------------
+# Pre-commit hook - TP3 Automatizacion de Calidad y Blindaje
+# Ejecuta de forma secuencial y obligatoria:
+#   1) Formatter  (Spotless / google-java-format)
+#   2) Linter     (Checkstyle)
+#   3) Tests      (JUnit + JaCoCo)
+# Si un paso falla, el commit se aborta (exit 1) y NO se ejecutan los
+# pasos siguientes.
+# ----------------------------------------------------------------------
+
+LOG_DIR="evidencias"
+LOG_FILE="$LOG_DIR/pre-commit.log"
+TMP_OUT="$LOG_DIR/.paso.tmp"
+
+mkdir -p "$LOG_DIR"
+
+log() {
+    echo "$1" | tee -a "$LOG_FILE"
+}
+
+run_step() {
+    numero="$1"
+    nombre="$2"
+    shift 2
+    log ""
+    log "[pre-commit] ($numero/3) $nombre ..."
+    "$@" > "$TMP_OUT" 2>&1
+    estado=$?
+    tee -a "$LOG_FILE" < "$TMP_OUT"
+    rm -f "$TMP_OUT"
+    if [ "$estado" -ne 0 ]; then
+        log ""
+        log "[pre-commit] FALLO en el paso $numero: $nombre (codigo de salida $estado)"
+        log "[pre-commit] COMMIT ABORTADO. Corregi el problema y volve a intentar."
+        exit 1
+    fi
+    log "[pre-commit] OK: $nombre"
+}
+
+log "============================================================"
+log "[pre-commit] $(date '+%Y-%m-%d %H:%M:%S') - validando antes de commitear"
+log "============================================================"
+
+run_step 1 "Formatter (Spotless)" mvn -B -ntp spotless:check
+run_step 2 "Linter (Checkstyle)" mvn -B -ntp checkstyle:check
+run_step 3 "Pruebas unitarias (JUnit)" mvn -B -ntp test
+
+log ""
+log "[pre-commit] TODOS LOS CONTROLES PASARON. Commit permitido."
+exit 0

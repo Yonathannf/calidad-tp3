@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <file path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Cliente.java"
+         totalNumberOfTokens="12"/>
+   <file path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Envio.java"
+         totalNumberOfTokens="18"/>
+   <file path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java"
+         totalNumberOfTokens="18"/>
+   <file path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java"
+         totalNumberOfTokens="310"/>
+   <file path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\TipoCliente.java"
+         totalNumberOfTokens="152"/>
+   <file path="C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Zona.java"
+         totalNumberOfTokens="245"/>
+</pmd-cpd>

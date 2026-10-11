@@ -1,0 +1,25 @@
+﻿[INFO] Scanning for projects...
+[INFO] Loaded 24051 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] -------------------< ar.edu.utn.tp3:calidad-pedidos >-------------------
+[INFO] Building TP3 - Automatización de Calidad y Blindaje 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions:2.17.1:display-dependency-updates (default-cli) @ calidad-pedidos ---
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] The following dependencies in Dependencies have newer versions:
+[INFO]   com.fasterxml.jackson.core:jackson-databind .......... 2.9.8 -> 2.22.3
+[INFO]   commons-collections:commons-collections ............ 3.2.1 -> 20040616
+[INFO]   org.apache.logging.log4j:log4j-core ............ 2.14.1 -> 3.0.0-beta3
+[INFO]   org.junit.jupiter:junit-jupiter ...................... 5.10.2 -> 6.1.3
+[INFO] 
+[INFO] The following dependencies in Plugin Dependencies have newer versions:
+[INFO]   com.puppycrawl.tools:checkstyle .................... 10.17.0 -> 14.3.0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.136 s
+[INFO] Finished at: 2026-10-10T23:38:31-03:00
+[INFO] ------------------------------------------------------------------------

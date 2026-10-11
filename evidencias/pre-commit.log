@@ -1,0 +1,167 @@
+============================================================
+[pre-commit] 2026-10-10 22:11:16 - validando antes de commitear
+============================================================
+
+[pre-commit] (1/3) Formatter (Spotless) ...
+[INFO] Scanning for projects...
+[INFO] Loaded 24051 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] -------------------< ar.edu.utn.tp3:calidad-pedidos >-------------------
+[INFO] Building TP3 - Automatización de Calidad y Blindaje 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default-cli) @ calidad-pedidos ---
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 3 files clean - 3 needs changes to be clean, 0 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.759 s
+[INFO] Finished at: 2026-10-10T22:11:31-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.diffplug.spotless:spotless-maven-plugin:2.43.0:check (default-cli) on project calidad-pedidos: The following files had format violations:
+[ERROR]     src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java
+[ERROR]         @@ -1,23 +1,31 @@
+[ERROR]          package·ar.edu.utn.tp3.pedidos;
+[ERROR]          
+[ERROR]          public·class·Pedido·{
+[ERROR]         -····public·String·cliente;
+[ERROR]         -····public·String·tipoCliente;·//·MAYORISTA,·MINORISTA·o·VIP
+[ERROR]         -····public·String·zona;·//·CABA,·GBA·o·INTERIOR
+[ERROR]         -····public·double·pesoKg;
+[ERROR]         -····public·double·montoBase;
+[ERROR]         -····public·int·cantidad;
+[ERROR]         -····public·boolean·urgente;
+[ERROR]         -····public·boolean·fragil;
+[ERROR]         +··public·String·cliente;
+[ERROR]         +··public·String·tipoCliente;·//·MAYORISTA,·MINORISTA·o·VIP
+[ERROR]         +··public·String·zona;·//·CABA,·GBA·o·INTERIOR
+[ERROR]         +··public·double·pesoKg;
+[ERROR]         +··public·double·montoBase;
+[ERROR]         +··public·int·cantidad;
+[ERROR]         +··public·boolean·urgente;
+[ERROR]         +··public·boolean·fragil;
+[ERROR]          
+[ERROR]         -····public·Pedido(String·cliente,·String·tipoCliente,·String·zona,·double·pesoKg,·double·montoBase,·int·cantidad,·boolean·urgente,·boolean·fragil)·{
+[ERROR]         -········this.cliente·=·cliente;
+[ERROR]         -········this.tipoCliente·=·tipoCliente;
+[ERROR]         -········this.zona·=·zona;
+[ERROR]         -········this.pesoKg·=·pesoKg;
+[ERROR]         -········this.montoBase·=·montoBase;
+[ERROR]         -········this.cantidad·=·cantidad;
+[ERROR]         -········this.urgente·=·urgente;
+[ERROR]         -········this.fragil·=·fragil;
+[ERROR]         -····}
+[ERROR]         +··public·Pedido(
+[ERROR]         +······String·cliente,
+[ERROR]         +······String·tipoCliente,
+[ERROR]         +······String·zona,
+[ERROR]         +······double·pesoKg,
+[ERROR]         +······double·montoBase,
+[ERROR]         +······int·cantidad,
+[ERROR]         +······boolean·urgente,
+[ERROR]         +······boolean·fragil)·{
+[ERROR]         +····this.cliente·=·cliente;
+[ERROR]         +····this.tipoCliente·=·tipoCliente;
+[ERROR]         +····this.zona·=·zona;
+[ERROR]         +····this.pesoKg·=·pesoKg;
+[ERROR]         +····this.montoBase·=·montoBase;
+[ERROR]         +····this.cantidad·=·cantidad;
+[ERROR]         +····this.urgente·=·urgente;
+[ERROR]         +····this.fragil·=·fragil;
+[ERROR]         +··}
+[ERROR]     ... (1 more lines that didn't fit)
+[ERROR] Violations also present in:
+[ERROR]     src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java
+[ERROR]     src\test\java\ar\edu\utn\tp3\pedidos\PedidoServiceTest.java
+[ERROR] Run 'mvn spotless:apply' to fix these violations.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+[pre-commit] FALLO en el paso 1: Formatter (Spotless) (codigo de salida 1)
+[pre-commit] COMMIT ABORTADO. Corregi el problema y volve a intentar.
+============================================================
+[pre-commit] 2026-10-10 22:35:37 - validando antes de commitear
+============================================================
+
+[pre-commit] (1/3) Formatter (Spotless) ...
+[INFO] Scanning for projects...
+[INFO] Loaded 24051 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] -------------------< ar.edu.utn.tp3:calidad-pedidos >-------------------
+[INFO] Building TP3 - Automatización de Calidad y Blindaje 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default-cli) @ calidad-pedidos ---
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Spotless.Java is keeping 3 files clean - 0 needs changes to be clean, 0 were already clean, 3 were skipped because caching determined they were already clean
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.024 s
+[INFO] Finished at: 2026-10-10T22:35:41-03:00
+[INFO] ------------------------------------------------------------------------
+[pre-commit] OK: Formatter (Spotless)
+
+[pre-commit] (2/3) Linter (Checkstyle) ...
+[INFO] Scanning for projects...
+[INFO] Loaded 24051 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] -------------------< ar.edu.utn.tp3:calidad-pedidos >-------------------
+[INFO] Building TP3 - Automatización de Calidad y Blindaje 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- checkstyle:3.4.0:check (default-cli) @ calidad-pedidos ---
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to jvnet-nexus-releases (https://maven.java.net/content/repositories/releases/): (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[INFO] Comenzando auditoría...
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:4:17: La variable 'cliente' debe ser privada y tener métodos de acceso. [VisibilityModifier]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:5:17: La variable 'tipoCliente' debe ser privada y tener métodos de acceso. [VisibilityModifier]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:6:17: La variable 'zona' debe ser privada y tener métodos de acceso. [VisibilityModifier]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:7:17: La variable 'pesoKg' debe ser privada y tener métodos de acceso. [VisibilityModifier]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:8:17: La variable 'montoBase' debe ser privada y tener métodos de acceso. [VisibilityModifier]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:9:14: La variable 'cantidad' debe ser privada y tener métodos de acceso. [VisibilityModifier]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:10:18: La variable 'urgente' debe ser privada y tener métodos de acceso. [VisibilityModifier]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:11:18: La variable 'fragil' debe ser privada y tener métodos de acceso. [VisibilityModifier]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:13:10: Más de 7 parámetros (encontrado 8). [ParameterNumber]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java:20:3: La complejidad ciclomática es 12 (máxima permitida es 10). [CyclomaticComplexity]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java:54:3: La complejidad ciclomática es 16 (máxima permitida es 10). [CyclomaticComplexity]
+[WARN] C:\Users\Nahuel\Downloads\calidad-tp3\calidad-tp3\src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java:54:3: El tamaño del método calcularCostoEnvio es 47 líneas (máximas permitidas 40). [MethodLength]
+Auditoría concluida.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[4,17] (design) VisibilityModifier: La variable 'cliente' debe ser privada y tener métodos de acceso.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[5,17] (design) VisibilityModifier: La variable 'tipoCliente' debe ser privada y tener métodos de acceso.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[6,17] (design) VisibilityModifier: La variable 'zona' debe ser privada y tener métodos de acceso.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[7,17] (design) VisibilityModifier: La variable 'pesoKg' debe ser privada y tener métodos de acceso.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[8,17] (design) VisibilityModifier: La variable 'montoBase' debe ser privada y tener métodos de acceso.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[9,14] (design) VisibilityModifier: La variable 'cantidad' debe ser privada y tener métodos de acceso.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[10,18] (design) VisibilityModifier: La variable 'urgente' debe ser privada y tener métodos de acceso.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[11,18] (design) VisibilityModifier: La variable 'fragil' debe ser privada y tener métodos de acceso.
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\Pedido.java:[13,10] (sizes) ParameterNumber: Más de 7 parámetros (encontrado 8).
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java:[20,3] (metrics) CyclomaticComplexity: La complejidad ciclomática es 12 (máxima permitida es 10).
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java:[54,3] (metrics) CyclomaticComplexity: La complejidad ciclomática es 16 (máxima permitida es 10).
+[WARNING] src\main\java\ar\edu\utn\tp3\pedidos\PedidoService.java:[54,3] (sizes) MethodLength: El tamaño del método calcularCostoEnvio es 47 líneas (máximas permitidas 40).
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.464 s
+[INFO] Finished at: 2026-10-10T22:35:49-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:3.4.0:check (default-cli) on project calidad-pedidos: You have 12 Checkstyle violations. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+[pre-commit] FALLO en el paso 2: Linter (Checkstyle) (codigo de salida 1)
+[pre-commit] COMMIT ABORTADO. Corregi el problema y volve a intentar.
